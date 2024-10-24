@@ -207,23 +207,87 @@
 </body>
 </html>
 
-     <footer class="footer">
-        <div class="footer-content">
-            <div class="contact-info">
-                <span>전화 02-3276-6923</span>
-                <span>|</span>
-                <span>팩스 02-3276-6925</span>
-                <span>|</span>
-                <span>서울시 영등포구 의사당대로88 한국투자증권빌딩 12F 노동조합사무실</span>
-            </div>
-            <div class="visitor-count">
-                <div>Today <span>646</span></div>
-                <div>Total <span>1169142</span></div>
-            </div>
+<style>
+    .footer {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 2rem 10%;
+        margin-top: 2rem;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-info {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .contact-info span {
+        margin: 0 0.5rem;
+    }
+
+    .contact-info span:first-child {
+        margin-left: 0;
+    }
+
+    .visitor-count {
+        display: flex;
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .visitor-count span {
+        color: #ffd700;
+        font-weight: bold;
+        margin-left: 0.5rem;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 0.8rem;
+        color: #888888;
+        padding-top: 1.5rem;
+        border-top: 1px solid #333333;
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-info span {
+            margin: 0.2rem 0;
+        }
+    }
+</style>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="contact-info">
+            <span>전화 02-3276-6923</span>
+            <span>|</span>
+            <span>팩스 02-3276-6925</span>
+            <span>|</span>
+            <span>서울시 영등포구 의사당대로88 한국투자증권빌딩 12F 노동조합사무실</span>
         </div>
-        <div class="copyright">
-            COPYRIGHT(C)2024 한국투자증권노동조합. ALL RIGHTS RESERVED
+        <div class="visitor-count">
+            <div>Today <span>646</span></div>
+            <div>Total <span>1,169,142</span></div>
         </div>
-    </footer>
-</body>
-</html>
+    </div>
+    <div class="copyright">
+        COPYRIGHT(C)2024 한국투자증권노동조합. ALL RIGHTS RESERVED
+    </div>
+</footer>
