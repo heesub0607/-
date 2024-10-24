@@ -9,222 +9,264 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Noto Sans KR', sans-serif;
         }
 
-        /* 네비게이션 스타일 */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 100;
+        }
+
         .nav-container {
-            display: flex;                    # 네비게이션을 가로로 배치
-            justify-content: space-between;   # 로고와 메뉴 사이 공간 분배
-            align-items: center;              # 세로 중앙 정렬
-            padding: 1rem 10%;               # 상하좌우 여백
-            background-color: white;          # 배경색 흰색
-            width: 100%;                      # 전체 너비 설정
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .logo-container {
-            display: flex;                    # 로고와 텍스트를 가로로 배치
-            align-items: center;              # 세로 중앙 정렬
-            gap: 10px;                        # 로고와 텍스트 사이 간격
-            max-width: 300px;                 # 로고 영역 최대 너비 제한
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
         .logo-image {
-            height: 40px;                     # 로고 높이 고정
-            width: auto;                      # 가로 비율 자동 조정
-            object-fit: contain;              # 이미지 비율 유지
-            display: block;                   # 블록 요소로 설정
+            height: 40px;
+            width: auto;
         }
 
         .logo-text {
-            font-size: 1.2rem;                # 텍스트 크기
-            font-weight: 500;                 # 텍스트 굵기
-            color: #333;                      # 텍스트 색상
-            white-space: nowrap;              # 텍스트 줄바꿈 방지
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #333;
         }
 
         .nav-menu {
-            display: flex;                    # 메뉴 항목 가로 배치
-            gap: 2rem;                        # 메뉴 항목 간격
+            display: flex;
+            gap: 2rem;
         }
 
         .nav-menu a {
-            text-decoration: none;            # 링크 밑줄 제거
-            color: #333;                      # 텍스트 색상
-            font-weight: 500;                 # 텍스트 굵기
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
         }
 
-        /* 메인 배너 스타일 */
+        /* 메인 배너 */
         .main-banner {
-            background-color: #722F37;        # 배경색 설정
-            padding: 4rem 10%;               # 여백 설정
-            color: white;                    # 텍스트 색상
-            min-height: 400px;               # 최소 높이 설정
-            position: relative;              # 포지션 설정
+            background-color: #722F37;
+            padding: 4rem 2rem;
+            color: white;
+            position: relative;
+        }
+
+        .banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .banner-text {
-            font-size: 2.5rem;               # 배너 텍스트 크기
-            font-weight: bold;               # 텍스트 굵기
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 1.4;
         }
 
-        /* 메인 메뉴 스타일 */
+        /* 메인 메뉴 */
         .main-menu {
-            display: grid;                    # 그리드 레이아웃
-            grid-template-columns: repeat(4, 1fr);  # 4칸 균등 분할
-            gap: 1rem;                        # 항목 간격
-            margin: -50px 10% 0;              # 위로 겹치게 배치
-            position: relative;               # 포지션 설정
-            z-index: 1;                       # 겹침 순서
+            max-width: 1200px;
+            margin: -50px auto 2rem;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            position: relative;
+            z-index: 10;
         }
 
         .menu-item {
-            background-color: #2b3a4a;        # 배경색
-            color: white;                     # 텍스트 색상
-            padding: 2rem;                    # 내부 여백
-            border-radius: 8px;               # 모서리 둥글게
+            background-color: #2b3a4a;
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
         }
 
-        /* 푸터 스타일 */
-        .footer {
-            background-color: #000000;        # 검은색 배경
-            color: #ffffff;                   # 흰색 텍스트
-            padding: 2rem 10%;               # 여백 설정
-            margin-top: 2rem;                # 위쪽 여백
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu-item p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* 푸터 */
+        footer {
+            margin-top: auto;
+            background-color: #000;
+            color: white;
+            padding: 2rem;
         }
 
         .footer-content {
-            display: flex;                    # 가로 배치
-            justify-content: space-between;   # 양쪽 정렬
-            align-items: center;              # 세로 중앙 정렬
-            margin-bottom: 1.5rem;           # 아래 여백
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
         }
 
         .contact-info {
-            font-size: 0.9rem;               # 글자 크기
-            line-height: 1.5;                # 줄 간격
+            font-size: 0.9rem;
         }
 
         .contact-info span {
-            margin: 0 0.5rem;                # 좌우 여백
+            margin: 0 0.5rem;
+            color: #888;
         }
 
         .visitor-count {
-            display: flex;                    # 가로 배치
-            gap: 1.5rem;                     # 간격
-            font-size: 0.9rem;               # 글자 크기
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
         }
 
         .visitor-count span {
-            color: #ffd700;                  # 금색 강조
-            font-weight: bold;               # 굵게
-            margin-left: 0.5rem;             # 왼쪽 여백
+            color: #ffd700;
+            font-weight: bold;
+            margin-left: 0.5rem;
         }
 
         .copyright {
-            text-align: center;              # 가운데 정렬
-            font-size: 0.8rem;               # 글자 크기
-            color: #888888;                  # 회색
-            padding-top: 1.5rem;             # 위쪽 여백
-            border-top: 1px solid #333333;   # 구분선
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #333;
+            font-size: 0.8rem;
+            color: #888;
         }
 
-        @media (max-width: 768px) {          # 모바일 스타일
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
             .nav-container {
-                padding: 1rem 5%;
+                padding: 1rem;
             }
-            
-            .logo-image {
-                height: 30px;
-            }
-            
+
             .logo-text {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
-            
+
             .nav-menu {
                 gap: 1rem;
             }
-            
-            .main-menu {
-                grid-template-columns: repeat(2, 1fr);  # 모바일에서 2열로 변경
-                margin: -30px 5% 0;
+
+            .nav-menu a {
+                padding: 0.3rem 0.5rem;
+                font-size: 0.9rem;
             }
 
-            .footer-content {
-                flex-direction: column;       # 모바일에서 세로 배치
+            .banner-text {
+                font-size: 2rem;
+            }
+
+            .main-menu {
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: -30px;
+                padding: 0 1rem;
+            }
+
+            .footer-top {
+                flex-direction: column;
                 gap: 1rem;
                 text-align: center;
             }
 
-            .contact-info {
-                display: flex;
-                flex-direction: column;
-            }
-
             .contact-info span {
-                margin: 0.2rem 0;
+                display: block;
+                margin: 0.3rem 0;
             }
         }
     </style>
 </head>
 <body>
-    <!-- 네비게이션 -->
-    <nav class="nav-container">
-        <div class="logo-container">
-            <img src="./로고.png" alt="Truefriend Union" class="logo-image">
-            <span class="logo-text">한국투자증권 노동조합</span>
-        </div>
-        <div class="nav-menu">
-            <a href="#">노조소개</a>
-            <a href="#">노조소식</a>
-            <a href="#">게시판</a>
-            <a href="#">도구함</a>
-        </div>
-    </nav>
+    <header>
+        <nav class="nav-container">
+            <div class="logo-container">
+                <img src="./로고.png" alt="Truefriend Union" class="logo-image">
+                <span class="logo-text">한국투자증권 노동조합</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#">노조소개</a>
+                <a href="#">노조소식</a>
+                <a href="#">게시판</a>
+                <a href="#">도구함</a>
+            </div>
+        </nav>
+    </header>
 
-    <!-- 메인 배너 -->
-    <section class="main-banner">
-        <h1 class="banner-text">한국투자증권 조합원<br>봄날이 온다</h1>
-    </section>
+    <main>
+        <section class="main-banner">
+            <div class="banner-content">
+                <h1 class="banner-text">한국투자증권 조합원<br>봄날이 온다</h1>
+            </div>
+        </section>
 
-    <!-- 메인 메뉴 -->
-    <div class="main-menu">
-        <div class="menu-item">
-            <h3>제안하세요.</h3>
-            <p>의견을 제안해주세요.</p>
+        <div class="main-menu">
+            <div class="menu-item">
+                <h3>제안하세요.</h3>
+                <p>정직적인 의견을 제안해주세요.</p>
+            </div>
+            <div class="menu-item">
+                <h3>두드림, 똑 똑!</h3>
+                <p>고충의 해결방법을 함께 찾아드릴게요.</p>
+            </div>
+            <div class="menu-item">
+                <h3>질의응답!</h3>
+                <p>노무법인을 통한 전문상담 제공.</p>
+            </div>
+            <div class="menu-item">
+                <h3>자유게시판</h3>
+                <p>취미, 생활, 업무상 고충을 서로 공유해요.</p>
+            </div>
         </div>
-        <div class="menu-item">
-            <h3>두드림, 똑 똑!</h3>
-            <p>고충의 해결방법을 함께 찾아드릴게요.</p>
-        </div>
-        <div class="menu-item">
-            <h3>질의응답!</h3>
-            <p>노무법인을 통한 전문상담 제공.</p>
-        </div>
-        <div class="menu-item">
-            <h3>자유게시판</h3>
-            <p>취미, 생활, 업무상 고충을 서로 공유해요.</p>
-        </div>
-    </div>
+    </main>
 
-    <!-- 푸터 -->
-    <footer class="footer">
+    <footer>
         <div class="footer-content">
-            <div class="contact-info">
-                <span>전화 02-3276-6923</span>
-                <span>|</span>
-                <span>팩스 02-3276-6925</span>
-                <span>|</span>
-                <span>서울시 영등포구 의사당대로88 한국투자증권빌딩 12F 노동조합사무실</span>
+            <div class="footer-top">
+                <div class="contact-info">
+                    <span>전화 02-3276-6923</span>
+                    <span>팩스 02-3276-6925</span>
+                    <span>서울시 영등포구 의사당대로88 한국투자증권빌딩 12F 노동조합사무실</span>
+                </div>
+                <div class="visitor-count">
+                    <div>Today <span>646</span></div>
+                    <div>Total <span>1,169,142</span></div>
+                </div>
             </div>
-            <div class="visitor-count">
-                <div>Today <span>646</span></div>
-                <div>Total <span>1,169,142</span></div>
+            <div class="copyright">
+                COPYRIGHT(C)2024 한국투자증권노동조합. ALL RIGHTS RESERVED
             </div>
-        </div>
-        <div class="copyright">
-            COPYRIGHT(C)2024 한국투자증권노동조합. ALL RIGHTS RESERVED
         </div>
     </footer>
 </body>
