@@ -140,14 +140,19 @@
 <body>
     <!-- 헤더 -->
     <header class="header">
-        <img src="./로고.png" alt="한국투자증권 노동조합" class="logo">
-        <nav class="nav-menu">
-            <a href="#">노조소개</a>
-            <a href="#">노조소식</a>
-            <a href="#">게시판</a>
-            <a href="#">도구함</a>
-        </nav>
-    </header>
+        <nav class="nav-container">               # 전체 네비게이션 컨테이너
+            <div class="logo-container">          # 로고 영역 컨테이너
+                <img src="./로고.png" 
+                     alt="Truefriend Union" 
+                     class="logo-image">          # 로고 이미지
+                <span class="logo-text">한국투자증권 노동조합</span>  # 로고 옆 텍스트
+            </div>
+                <a href="#">노조소개</a>
+                <a href="#">노조소식</a>
+                <a href="#">게시판</a>
+                <a href="#">도구함</a>
+            </nav>
+        </header>
 
     <!-- 메인 배너 -->
     <section class="main-banner">
